@@ -2,9 +2,10 @@
 import AppMain from './components/AppMain.vue';
 //* Import the page of data store
 import { store } from './assets/data/store.js'
+import AppHeader from './components/AppHeader.vue';
 
 export default {
-  components: { AppMain },
+  components: { AppMain, AppHeader },
   data() {
     return {
       store,
@@ -14,7 +15,8 @@ export default {
 </script>
 
 <template>
-  <AppMain :pokemons="store.pokemons" />
+  <AppHeader />
+  <AppMain />
 </template>
 
 <style lang="scss">
